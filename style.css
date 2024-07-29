@@ -1,0 +1,77 @@
+:root {
+    --dark-slate-blue: #3c5f97;
+    --midnight-blue: #213058;
+    --red: #f04b4c;
+    --white: #efefef;
+    --gray: #f5f5f5;
+    --metal: #3a3a3a;
+  }
+
+  body {
+    background-color: var(--gray);
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1 {
+    font-family: 'Montserrat', serif;
+    color: var(--dark-slate-blue);
+  }
+
+  .btn-indigo {
+    background-color: var(--dark-slate-blue);
+    color: var(--white);
+  }
+
+  .btn-indigo:hover {
+    background-color: #1b2748;
+  }
+
+  #results-modal {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .modal-content {
+    max-height: 90vh; /* Limit the modal height */
+    overflow-y: hidden; /* Prevent vertical scrolling in the modal content */
+  }
+
+  .results-container {
+    max-height: 45vh; /* Adjust the height for the scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+  .modal-footer {
+    position: sticky; /* Keep the footer at the bottom */
+    bottom: 0;
+    background: white;
+    border-top: 1px solid #e2e8f0; /* Light gray border for separation */
+  }
+
+  .btn-red {
+    background-color: var(--red);
+    color: var(--white);
+  }
+
+  .btn-red:hover {
+    background-color: #d43b3c;
+  }
+  
+  /* style.css */
+
+a {
+    display: inline-block;
+    background-color: #edf2f7;
+    color: #4a5568;
+    padding: 8px 16px;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  a:hover {
+    background-color: #cbd5e0;
+  }
+  
+  a:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+  }
