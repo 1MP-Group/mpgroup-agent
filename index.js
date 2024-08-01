@@ -98,13 +98,14 @@ function displayResults(data) {
     
     let contactLink = '';
     if (agent.agent_email) {
-      contactLink = `<a href="mailto:${agent.agent_email}" class="block mt-2 text-indigo-600 hover:underline bg-indigo-100 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500">Contact Agent</a>`;
+      contactLink = `<a href="mailto:${agent.agent_email}" class="block mt-2 text-white bg-indigo-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-500">Contact Agent</a>`;
     } else if (agent.agent_page) {
-      contactLink = `<a href="${agent.agent_page}" target="_blank" class="block mt-2 text-indigo-600 hover:underline bg-indigo-100 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500">Contact Agent</a>`;
+      contactLink = `<a href="${agent.agent_page}" target="_blank" class="block mt-2 text-white bg-indigo-600 py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-500">Contact Agent</a>`;
     }
     
+    const [firstName, ...lastName] = agent.name.split(' ');
     agentElement.innerHTML = `
-      <h2 class="text-xl font-bold">${agent.name}</h2>
+      <h2 class="text-xl font-bold text-midnight-blue">${firstName}<br>${lastName.join(' ')}</h2>
       ${contactLink}
     `;
     resultsDiv.appendChild(agentElement);
