@@ -18,6 +18,14 @@ const agents = [
       "agent_page": "",
       "states": ["Virginia","Maryland","Washington D.C.","Delaware","Florida","Georgia","Pennsylvania","Texas","West Virginia"]
     },
+
+   {
+      "name": "Claire O'Halloran",
+      "agent_email": "claire@mpgroup.org",
+      "agent_page": "",
+      "states": ["Virginia","Maryland","Washington D.C.","Alabama"]
+    },
+
     
     {
       "name": "Dan Csaky",
