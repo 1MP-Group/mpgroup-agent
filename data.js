@@ -5,12 +5,7 @@ const agents = [
       "agent_page": "https://mpgroup.org/alena-marchant/",
       "states": ["Alabama","Arkansas","Delaware","Florida","Indiana","Kentucky","Maryland","Michigan","New York","North Carolina","North Dakota","Ohio","Pennsylvania","South Carolina","South Dakota","Tennessee","Texas","Virginia","West Virginia","Washington D.C."]
     },
-    {
-      "name": "Angelica Heiskill",
-      "agent_email": "angelica@mpgroup.org",
-      "agent_page": "",
-      "states": ["Virginia","Connecticut","Nevada","New York","New Jersey","Maryland","Washington D.C.","New Mexico","Florida"]
-    },
+ 
     {
       "name": "Charley Spiridopoulos",
       "agent_email": "cspiro@verizon.net",
@@ -23,12 +18,7 @@ const agents = [
       "agent_page": "",
       "states": ["Virginia","Maryland","Washington D.C.","Delaware","Florida","Georgia","Pennsylvania","Texas","West Virginia"]
     },
-    {
-      "name": "Cristina Guzman",
-      "agent_email": "cristina@mpgroup.org",
-      "agent_page": "",
-      "states": ["Virginia","Washington D.C.","Maryland","New York","Connecticut","North Carolina","Florida","Nevada","New Jersey","Arizona","Arkansas","Texas","Pennsylvania","Illinois","New Mexico"]
-    },
+    
     {
       "name": "Dan Csaky",
       "agent_email": "",
