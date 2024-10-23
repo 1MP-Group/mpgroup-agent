@@ -81,6 +81,14 @@ const agents = [
       "agent_page": "https://mpgroup.org/kevin-chaikin/",
       "states": ["Alabama","Arizona","California","Colorado","Connecticut","Washington D.C.","Delaware","Florida","Georgia","Iowa","Illinois","Indiana","Louisiana","Kentucky","Massachusetts","Maryland","Maine","Michigan","Minnesota","North Carolina","Nebraska","New Hampshire","New Jersey","New Mexico","New York","Nevada","Ohio","Oregon","Pennsylvania","South Carolina","Tennessee","Texas","Virginia","West Virginia","Wyoming"]
     },
+
+  {
+      "name": "Lisa Kohrt",
+      "agent_email": "lisa@mpgroup.org",
+      "agent_page": "",
+      "states": ["Washington D.C.", "Maryland", "Virginia"]
+    },
+
     {
       "name": "Mike Hamric",
       "agent_email": "mhamric@protonmail.com",
