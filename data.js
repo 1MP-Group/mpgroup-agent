@@ -3,14 +3,14 @@ const agents = [
       "name": "Alena Marchant",
       "agent_email": "",
       "agent_page": "https://mpgroup.org/alena-marchant/",
-      "states": ["Alabama","Arkansas","Delaware","Florida","Indiana","Kentucky","Maryland","Michigan","New York","North Carolina","North Dakota","Ohio","Pennsylvania","South Carolina","South Dakota","Tennessee","Texas","Virginia","West Virginia","Washington D.C."]
+      "states": ["Alabama", "Arkansas", "Arizona", "California", "Colorado", "Delaware", "Washington D.C", "Florida", "Georgia", "Illinois", "Indiana", "Kentucky", "Maryland", "Michigan", "Minnesota", "Missouri", "New York", "North Carolina", "North Dakota", "Ohio", "Pennsylvania", "South Carolina", "South Dakota", "Tennessee", "Texas", "Virginia", "West Virginia"]
     },
 
    {
       "name": "Amy Noone",
       "agent_email": "",
       "agent_page": "https://mpgroup.org/contact-licensed-medicare-insurance-agent-amy-noone-now/",
-      "states": ["Delaware","Maryland","Pennsylvania","Virginia"]
+      "states": ["Delaware", "Florida", "Illinois", "Maryland", "North Carolina", "Pennsylvania", "South Carolina", "Texas", "Virginia"]
     },
 
     {
@@ -50,13 +50,13 @@ const agents = [
       "name": "Emily O'Halloran",
       "agent_email": "",
       "agent_page": "https://mpgroup.org/emily-ohalloran/",
-      "states": ["Alabama","Arizona","Connecticut","Delaware","Washington D.C.","Florida","Maryland","Missouri","New Jersey","North Carolina","Pennsylvania","South Carolina","Tennessee","Texas","Virginia","West Virginia","Wisconsin"]
+      "states": ["Alabama", "Arizona", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Maryland", "Massachusetts", "Minnesota", "Missouri", "New Jersey", "New Mexico", "North Carolina", "Pennsylvania", "South Carolina", "Tennessee", "Texas", "Virginia", "Washington D.C.", "West Virginia", "Wisconsin"]
     },
     {
       "name": "Gabe Pilato",
       "agent_email": "",
       "agent_page": "https://mpgroup.org/gabe-pilato/",
-      "states": ["South Carolina","Alabama","Georgia"]
+      "states": ["Alabama","Colorado","Georgia", "Minnesota", "South Carolina"]
     },
     {
       "name": "Gary Cox",
@@ -74,13 +74,15 @@ const agents = [
       "name": "John Norce",
       "agent_email": "john@mpgroup.org",
       "agent_page": "",
-      "states": ["Arkansas","Arizona","California","Colorado","Connecticut","Washington D.C.","Delaware","Florida","Georgia","Iowa","Illinois","Indiana","Kentucky","Louisiana","Massachusetts","Maryland","Maine","Michigan","Missouri","Minnesota","North Carolina","Nebraska","New Hampshire","New Jersey","New Mexico","Nevada","New York","Ohio","Oklahoma","Oregon","Pennsylvania","South Carolina","Tennessee","Texas","Virginia","West Virginia","Wyoming"]
+      "states": ["Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Iowa", "Illinois", "Indiana", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Nebraska", "New Hampshire", "New Jersey", "New Mexico", "Nevada", "New York", "North Carolina", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "South Carolina", "Tennessee", "Texas", "Virginia", "Vermont", "Washington D.C.", "West Virginia", "Wyoming"
+]
     },
     {
       "name": "Karin Cantrell",
       "agent_email": "",
       "agent_page": "https://mpgroup.org/karin-cantwell/",
-      "states": ["Delaware","Florida","Maryland","North Carolina","Virginia","Washington D.C."]
+      "states": ["Delaware", "Florida", "Maryland", "New York", "North Carolina", "Pennsylvania", "Virginia", "Washington D.C."
+"]
     },
     {
       "name": "Kevin Chaikin",
@@ -93,7 +95,8 @@ const agents = [
       "name": "Lisa Kohrt",
       "agent_email": "lisa@mpgroup.org",
       "agent_page": "",
-      "states": ["Washington D.C.", "Maryland", "Virginia"]
+      "states": ["Alabama", "Delaware", "Florida", "Georgia", "Maryland", "Michigan", "North Carolina", "Ohio", "Pennsylvania", "South Carolina", "Tennessee", "Texas", "Virginia", "Washington D.C.", "West Virginia"
+]
     },
 
     {
@@ -127,4 +130,10 @@ const agents = [
       "states": ["Washington D.C.", "Florida", "Maryland", "Michigan", "North Carolina", "South Carolina", "Virginia", "West Virginia"]
     }
   ];
-  
+
+{
+      "name": "Lisa Scott",
+      "agent_email": "",
+      "agent_page": "https://mpgroup.org/lisa-scott/",
+      "states": ["Washington D.C", "Florida","Maryland", "New York","Ohio","Pennsylvania", "South Carolina","Virginia"]
+    },
