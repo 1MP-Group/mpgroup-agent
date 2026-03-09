@@ -1,16 +1,72 @@
+const stateAbbreviations = {
+  al: "alabama",
+  ak: "alaska",
+  az: "arizona",
+  ar: "arkansas",
+  ca: "california",
+  co: "colorado",
+  ct: "connecticut",
+  de: "delaware",
+  fl: "florida",
+  ga: "georgia",
+  hi: "hawaii",
+  id: "idaho",
+  il: "illinois",
+  in: "indiana",
+  ia: "iowa",
+  ks: "kansas",
+  ky: "kentucky",
+  la: "louisiana",
+  me: "maine",
+  md: "maryland",
+  ma: "massachusetts",
+  mi: "michigan",
+  mn: "minnesota",
+  ms: "mississippi",
+  mo: "missouri",
+  mt: "montana",
+  ne: "nebraska",
+  nv: "nevada",
+  nh: "new hampshire",
+  nj: "new jersey",
+  nm: "new mexico",
+  ny: "new york",
+  nc: "north carolina",
+  nd: "north dakota",
+  oh: "ohio",
+  ok: "oklahoma",
+  or: "oregon",
+  pa: "pennsylvania",
+  ri: "rhode island",
+  sc: "south carolina",
+  sd: "south dakota",
+  tn: "tennessee",
+  tx: "texas",
+  ut: "utah",
+  vt: "vermont",
+  va: "virginia",
+  wa: "washington",
+  wv: "west virginia",
+  wi: "wisconsin",
+  wy: "wyoming",
+  dc: "washington d.c"
+};
+
 document.getElementById('search-form').addEventListener('submit', function(event) {
   event.preventDefault();
 
-  clearResults();
-  clearError();
+  let state = document.getElementById('state').value.trim().toLowerCase();
 
-  const state = document.getElementById('state').value.trim().toLowerCase();
+  if (stateAbbreviations[state]) {
+    state = stateAbbreviations[state];
+  }
 
   if (!isValidState(state)) {
     displayError('Please enter a valid US state.');
     return;
   }
 
+  clearResults();
   displayLoadingIndicator();
   fetchData(state);
 });
@@ -20,10 +76,7 @@ document.getElementById('close-modal').addEventListener('click', function() {
 });
 
 function normalizeState(value) {
-  return value
-    .toLowerCase()
-    .replace(/\./g, '')
-    .trim();
+  return value.toLowerCase().replace(/\./g, '').trim();
 }
 
 function fetchData(state) {
@@ -52,17 +105,17 @@ function fetchData(state) {
 
 function isValidState(state) {
   const states = [
-    "alabama", "alaska", "arizona", "arkansas", "california", "colorado",
-    "connecticut", "delaware", "florida", "georgia", "hawaii", "idaho",
-    "illinois", "indiana", "iowa", "kansas", "kentucky", "louisiana",
-    "maine", "maryland", "massachusetts", "michigan", "minnesota",
-    "mississippi", "missouri", "montana", "nebraska", "nevada",
-    "new hampshire", "new jersey", "new mexico", "new york",
-    "north carolina", "north dakota", "ohio", "oklahoma", "oregon",
-    "pennsylvania", "rhode island", "south carolina", "south dakota",
-    "tennessee", "texas", "utah", "vermont", "virginia", "washington",
-    "west virginia", "wisconsin", "wyoming",
-    "washington dc", "washington d.c", "washington d.c.", "district of columbia", "dc"
+    "alabama","alaska","arizona","arkansas","california","colorado",
+    "connecticut","delaware","florida","georgia","hawaii","idaho",
+    "illinois","indiana","iowa","kansas","kentucky","louisiana",
+    "maine","maryland","massachusetts","michigan","minnesota",
+    "mississippi","missouri","montana","nebraska","nevada",
+    "new hampshire","new jersey","new mexico","new york",
+    "north carolina","north dakota","ohio","oklahoma","oregon",
+    "pennsylvania","rhode island","south carolina","south dakota",
+    "tennessee","texas","utah","vermont","virginia","washington",
+    "west virginia","wisconsin","wyoming",
+    "washington dc","washington d.c","washington d.c.","dc"
   ];
 
   return states.includes(state);
@@ -108,20 +161,22 @@ function clearError() {
 
 function displayResults(data) {
   const resultsDiv = document.getElementById('results');
-  resultsDiv.innerHTML = '';
 
   data.forEach(agent => {
     const agentElement = document.createElement('div');
     agentElement.className = 'agent p-4 border-b border-gray-300';
 
     let contactLink = '';
+
     if (agent.agent_email) {
       contactLink = `<a href="mailto:${agent.agent_email}" class="block mt-2 text-white btn-indigo py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:midnight-blue focus:outline-none focus:ring-2 focus:ring-indigo-500">Contact Agent</a>`;
-    } else if (agent.agent_page) {
+    } 
+    else if (agent.agent_page) {
       contactLink = `<a href="${agent.agent_page}" target="_blank" class="block mt-2 text-white btn-indigo py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:midnight-blue focus:outline-none focus:ring-2 focus:ring-indigo-500">Contact Agent</a>`;
     }
 
     const [firstName, ...lastName] = agent.name.split(' ');
+
     agentElement.innerHTML = `
       <h2 class="text-xl font-bold text-midnight-blue">${firstName}<br>${lastName.join(' ')}</h2>
       ${contactLink}
