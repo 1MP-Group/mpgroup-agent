@@ -123,17 +123,16 @@ const agents = [
       "agent_page": "",
       "states": ["Virginia", "Maryland", "Pennsylvania", "New York", "New Jersey", "Florida", "California", "South Carolina", "Alabama", "Georgia"]
     },
-    {
+     {
       "name": "Kathleen O'Halloran",
       "agent_email": "",
       "agent_page": "https://mpgroup.org/kathleen-ohalloran/",
       "states": ["Washington D.C.", "Florida", "Maryland", "Michigan", "North Carolina", "South Carolina", "Virginia", "West Virginia"]
-    }
-  ];
-
-{
+    },
+    {
       "name": "Lisa Scott",
       "agent_email": "",
       "agent_page": "https://mpgroup.org/lisa-scott/",
-      "states": ["Washington D.C", "Florida","Maryland", "New York","Ohio","Pennsylvania", "South Carolina","Virginia"]
-    },
+      "states": ["Washington D.C", "Florida", "Maryland", "New York", "Ohio", "Pennsylvania", "South Carolina", "Virginia"]
+    }
+];
