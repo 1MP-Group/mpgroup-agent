@@ -1,14 +1,16 @@
 document.getElementById('search-form').addEventListener('submit', function(event) {
   event.preventDefault();
-  
+
+  clearResults();
+  clearError();
+
   const state = document.getElementById('state').value.trim().toLowerCase();
-  
+
   if (!isValidState(state)) {
     displayError('Please enter a valid US state.');
     return;
   }
-  
-  clearResults();
+
   displayLoadingIndicator();
   fetchData(state);
 });
@@ -17,9 +19,20 @@ document.getElementById('close-modal').addEventListener('click', function() {
   hideModal();
 });
 
+function normalizeState(value) {
+  return value
+    .toLowerCase()
+    .replace(/\./g, '')
+    .trim();
+}
+
 function fetchData(state) {
+  const normalizedInput = normalizeState(state);
+
   const results = agents
-    .filter(agent => agent.states.some(s => s.toLowerCase() === state))
+    .filter(agent =>
+      agent.states.some(s => normalizeState(s) === normalizedInput)
+    )
     .sort((a, b) => {
       const lastNameA = a.name.split(' ').slice(-1)[0].toLowerCase();
       const lastNameB = b.name.split(' ').slice(-1)[0].toLowerCase();
@@ -27,11 +40,13 @@ function fetchData(state) {
     });
 
   removeLoadingIndicator();
+
   if (results.length === 0) {
     displayMessage('No agents found for the specified state.');
   } else {
     displayResults(results);
   }
+
   showModal();
 }
 
@@ -46,9 +61,10 @@ function isValidState(state) {
     "north carolina", "north dakota", "ohio", "oklahoma", "oregon",
     "pennsylvania", "rhode island", "south carolina", "south dakota",
     "tennessee", "texas", "utah", "vermont", "virginia", "washington",
-    "west virginia", "wisconsin", "wyoming"
+    "west virginia", "wisconsin", "wyoming",
+    "washington dc", "washington d.c", "washington d.c.", "district of columbia", "dc"
   ];
-  
+
   return states.includes(state);
 }
 
@@ -92,22 +108,25 @@ function clearError() {
 
 function displayResults(data) {
   const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = '';
+
   data.forEach(agent => {
     const agentElement = document.createElement('div');
     agentElement.className = 'agent p-4 border-b border-gray-300';
-    
+
     let contactLink = '';
     if (agent.agent_email) {
       contactLink = `<a href="mailto:${agent.agent_email}" class="block mt-2 text-white btn-indigo py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:midnight-blue focus:outline-none focus:ring-2 focus:ring-indigo-500">Contact Agent</a>`;
     } else if (agent.agent_page) {
       contactLink = `<a href="${agent.agent_page}" target="_blank" class="block mt-2 text-white btn-indigo py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:midnight-blue focus:outline-none focus:ring-2 focus:ring-indigo-500">Contact Agent</a>`;
     }
-    
+
     const [firstName, ...lastName] = agent.name.split(' ');
     agentElement.innerHTML = `
       <h2 class="text-xl font-bold text-midnight-blue">${firstName}<br>${lastName.join(' ')}</h2>
       ${contactLink}
     `;
+
     resultsDiv.appendChild(agentElement);
   });
 }
