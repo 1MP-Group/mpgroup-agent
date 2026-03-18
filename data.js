@@ -51,7 +51,7 @@ const agents = [
     "name": "Gabe Pilato",
     "agent_email": "",
     "agent_page": "https://mpgroup.org/gabe-pilato/",
-    "states": ["Alabama", "Colorado", "Georgia", "Minnesota", "South Carolina"]
+    "states": ["Alabama","Colorado","Georgia","Michigan","South Carolina"]
   },
   {
     "name": "Gary Cox",
@@ -63,13 +63,13 @@ const agents = [
     "name": "Jeff LeSourd",
     "agent_email": "",
     "agent_page": "https://mpgroup.org/jeff-lesourd/",
-    "states": ["Virginia", "Maryland", "West Virginia", "North Carolina", "Florida", "Ohio", "Pennsylvania", "Wyoming"]
+    "states": ["Virginia", "Maryland", "West Virginia", "North Carolina", "Florida", "Ohio", "Pennsylvania", "Wyoming", "Washington D.C."]
   },
   {
     "name": "John Norce",
     "agent_email": "john@mpgroup.org",
     "agent_page": "",
-    "states": ["Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Iowa", "Illinois", "Indiana", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Nebraska", "New Hampshire", "New Jersey", "New Mexico", "Nevada", "New York", "North Carolina", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "South Carolina", "Tennessee", "Texas", "Virginia", "Vermont", "Washington D.C.", "West Virginia", "Wyoming"]
+    "states": ["Arizona", "Arkansas", "Alabama", "Mississippi", "Montana", "Rhode Island", "South Dakota", "Utah", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Iowa", "Illinois", "Indiana", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Nebraska", "New Hampshire", "New Jersey", "New Mexico", "Nevada", "New York", "North Carolina", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "South Carolina", "Tennessee", "Texas", "Virginia", "Vermont", "Washington D.C.", "West Virginia", "Wyoming"]
   },
   {
     "name": "Karin Cantrell",
@@ -99,7 +99,7 @@ const agents = [
     "name": "Paul Carswell",
     "agent_email": "",
     "agent_page": "https://mpgroup.org/paul-carswell-2/",
-    "states": ["Alabama", "Washington D.C.", "Delaware", "Florida", "Georgia", "Maryland", "Michigan", "North Carolina", "New Mexico", "New Jersey", "Ohio", "Oklahoma", "Pennsylvania", "South Carolina", "Tennessee", "Texas", "Virginia"]
+    "states": ["Alabama", "Connecticut", "Washington D.C.", "Delaware", "Florida", "Georgia", "Maryland", "Michigan", "North Carolina", "New Mexico", "New Jersey", "Ohio", "Oklahoma", "Pennsylvania", "South Carolina", "Tennessee", "Texas", "Virginia"]
   },
   {
     "name": "Riley O'Halloran",
