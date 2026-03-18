@@ -9,7 +9,7 @@ const agents = [
     "name": "Amy Noone",
     "agent_email": "",
     "agent_page": "https://mpgroup.org/contact-licensed-medicare-insurance-agent-amy-noone-now/",
-    "states": ["Delaware", "Florida", "Illinois", "Maryland", "New Jersey", "North Carolina", "Pennsylvania", "South Carolina", "Texas", "Washington D.C", "Virginia"]
+    "states": ["California", "Connecticut", "Washington D.C.", "Delaware", "Florida", "Georgia", "Illinois", "Massachusetts", "Maryland", "North Carolina", "New Hampshire", "New Jersey", "Pennsylvania", "South Carolina", "Tennessee", "Texas", "Virginia", "Wisconsin"]
   },
   {
     "name": "Charley Spiridopoulos",
